@@ -16,10 +16,13 @@ cat SRR8797509.fastq | wc -l
 # Splitting unshuffled samples
 cd..
 mkdir unshuffled && cd unshuffled
-seqkit split2 -1 reads_1.fq.gz -2 reads_2.fq.gz -p 5 -O out -f
-#QC
-for f in ~/workdir/fqData/*.fq.gz;do
+seqkit split2 -1 SRR8797509_1.fastq -2 SRR8797509_2.fastq  -p 5 -O out -f
+#QC for sample one
+for f in /home/nehal/assign/unshuffled/out/SRR8797509_*.part_001.fastq;do
 fastqc -t 1 -f fastq -noextract $f;done
+multiqc -z -o . .
+
+
 
 
 
