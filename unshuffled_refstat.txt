@@ -1,0 +1,4 @@
+Total_Exons(count|total|mean|std)	1479|1409240|952.8|3602.9
+Unique_Exons(count|total|mean|std)	1465|1391671|949.9|3618.0
+Transcripts(count)	1479
+Intronic_Edges(count)	0
